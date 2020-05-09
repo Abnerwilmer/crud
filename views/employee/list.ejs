@@ -1,16 +1,16 @@
 <%- include('../partials/head') %>
 <h3>
-    <a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New</a>
+    <a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Novo Integrante</a>
     Lista da Vaza Jato
 </h3>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Full Name</th>
+            <th>Nome</th>
             <th>Email</th>
-            <th>Mobile</th>
-            <th>City</th>
-            <th>Estado</th>
+            <th>Celular</th>
+            <th>Localização</th>
+            <th>Delação</th>
             <th></th>
         </tr>
     </thead>
@@ -20,8 +20,8 @@
             <td><%= list[i].fullName %></td>
             <td><%= list[i].email %></td>
             <td><%= list[i].mobile %></td>
-            <td><%= list[i].city %></td>
-            <td><%= list[i].estado %></td>
+            <td><%= list[i].city %>, <%= list[i].estado %></td>
+            <td><%= list[i].delacao %></td>
             <td>
                 <a href="/employee/<%= list[i]._id %>"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
                 <a href="/employee/delete/<%= list[i]._id %>"

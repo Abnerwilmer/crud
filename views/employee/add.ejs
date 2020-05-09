@@ -1,33 +1,60 @@
 <%- include('../partials/head') %>
-<h3><%= viewTitle %></h3>
+<h3>Adicionar Delator</h3>
 
 <form action="/employee" method="POST" autocomplete="off">
     <input type="hidden" name="_id">
     <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" class="form-control" name="fullName" placeholder="Full Name">
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input type="text" class="form-control" name="email" placeholder="Email">
+        <label>Nome Completo</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Nome Completo">
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label>Mobile</label>
-            <input type="text" class="form-control" name="mobile" placeholder="Mobile">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Email">
         </div>
         <div class="form-group col-md-6">
-            <label>City</label>
-            <input type="text" class="form-control" name="city" placeholder="City">
-        </div>
-        <div class="form-group col-md-6">
-            <label>Estado</label>
-            <input type="text" class="form-control" name="estado" placeholder="Estado">
+            <label>Celular</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Celular">
         </div>
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
-        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+        <label>CEP</label>
+        <input type="text" class="form-control" name="cep" placeholder="CEP" id="cep-field">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Estado</label>
+            <input type="text" class="form-control" name="estado" placeholder="Estado" id="estado-field" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Cidade</label>
+            <input type="text" class="form-control" name="city" placeholder="Cidade" id="cidade-field" readonly>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Bairro</label>
+            <input type="text" class="form-control" name="bairro" placeholder="Bairro" id="bairro-field" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Logradouro</label>
+            <input type="text" class="form-control" name="logradouro" placeholder="Logradouro" id="logradouro-field"
+                readonly>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Complemento</label>
+        <input type="text" class="form-control" name="complemento" placeholder="Complemento">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label>Delação</label>
+            <textarea class="form-control" name="delacao" placeholder="Delação"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Salvar</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> Ver Todos</a>
     </div>
 </form>
 <%- include('../partials/footer') %>

@@ -10,12 +10,27 @@ var employeeSchema = new mongoose.Schema({
     mobile: {
         type: String
     },
+    cep: {
+        type: String
+    },
     city: {
         type: String
     },
     estado: {
         type: String
-    }
+    },
+    logradouro: {
+        type: String
+    },
+    bairro: {
+        type: String
+    },
+    complemento: {
+        type: String
+    },
+    delacao: {
+        type: String
+    },
 });
 
 // Custom validation for email
